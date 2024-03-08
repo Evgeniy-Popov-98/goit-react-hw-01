@@ -1,0 +1,35 @@
+.frendItem {
+  width: 120px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.frentItemImg {
+  margin: 0;
+  max-width: 100%;
+  display: block;
+}
+
+.frendItemName {
+  margin: 10px 0;
+  font-size: 24px;
+  color: black;
+  font-weight: 500;
+}
+
+.frendItemInfoTrue {
+  font-size: 18px;
+  color: green;
+}
+
+.frendItemInfoFalse {
+  font-size: 18px;
+  color: red;
+}
