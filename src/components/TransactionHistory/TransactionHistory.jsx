@@ -1,4 +1,3 @@
-import TransactionTable from '../TransactionTable/TransactionTable';
 import clsx from 'clsx';
 import css from './TransactionHistory.module.css';
 
@@ -14,18 +13,15 @@ const TransactionHistory = ({ items }) => {
       </thead>
 
       <tbody className={clsx(css.transactionBox)}>
-        {Array.isArray(items) &&
-          items.map(item => {
-            return (
-              <tr key={item.id}>
-                <TransactionTable
-                  type={item.type}
-                  amount={item.amount}
-                  currency={item.currency}
-                />
-              </tr>
-            );
-          })}
+        {items.map(item => {
+          return (
+            <tr key={item.id}>
+              <td className={clsx(css.tdItem)}>{item.type}</td>
+              <td className={clsx(css.tdItem)}>{item.amount}</td>
+              <td className={clsx(css.tdItem)}>{item.currency}</td>
+            </tr>
+          );
+        })}
       </tbody>
     </table>
   );
