@@ -4,8 +4,13 @@ import css from './FriendListItem.module.css';
 const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <div className={clsx(css.frendItem)}>
-      <img src={avatar} alt="Avatar" width="48" />
-      <p className={clsx(css.frendName)}>{name}</p>
+      <img
+        className={clsx(css.frentItemImg)}
+        src={avatar}
+        alt="Avatar"
+        width="48"
+      />
+      <p className={clsx(css.frendItemName)}>{name}</p>
       {isOnline ? (
         <p className={clsx(css.frendItemInfoTrue)}>Online</p>
       ) : (

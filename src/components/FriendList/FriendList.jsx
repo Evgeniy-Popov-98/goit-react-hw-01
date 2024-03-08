@@ -5,19 +5,18 @@ import css from './FriendList.module.css';
 const FriendList = ({ friends }) => {
   return (
     <ul className={clsx(css.frendList)}>
-      {Array.isArray(friends) &&
-        friends.map(frend => {
-          return (
-            <li className={clsx(css.frendLi)} key={frend.id}>
-              <FriendListItem
-                key={frend.id}
-                avatar={frend.avatar}
-                name={frend.name}
-                isOnline={frend.isOnline}
-              />
-            </li>
-          );
-        })}
+      {friends.map(frend => {
+        return (
+          <li className={clsx(css.frendLi)} key={frend.id}>
+            <FriendListItem
+              key={frend.id}
+              avatar={frend.avatar}
+              name={frend.name}
+              isOnline={frend.isOnline}
+            />
+          </li>
+        );
+      })}
     </ul>
   );
 };
